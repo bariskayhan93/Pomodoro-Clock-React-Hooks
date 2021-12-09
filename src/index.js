@@ -19,9 +19,9 @@ function App() {
 
   useEffect(() => {
     console.log(myAudio);
-    if(seconds === 0 && minutes === 0){
+    if (seconds === 0 && minutes === 0) {
       myAudio.current.play();
-      }
+    }
     if (isActive) {
       interval = window.setInterval(() => {
         clearInterval(interval);
@@ -86,10 +86,10 @@ function App() {
         setPauseMinutes(5);
         setMinutes(25);
         setSeconds(0);
-        setDisplayMessage(false)
-        myAudio.current.load()
+        setDisplayMessage(false);
+        myAudio.current.load();
         myAudio.current.pause();
-      
+
         break;
       case "start_stop":
         setIsActive(!isActive);
